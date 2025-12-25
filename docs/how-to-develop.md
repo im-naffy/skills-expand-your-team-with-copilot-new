@@ -18,10 +18,14 @@ This project is best developed using GitHub Codespaces, which provides a consist
 
 The project requires the following Python packages:
 
-- FastAPI - Modern web framework for building APIs
-- Uvicorn - ASGI server implementation for running the FastAPI application
+- **FastAPI** - Modern web framework for building APIs
+- **Uvicorn** - ASGI server implementation for running the FastAPI application
+- **PyMongo** - MongoDB driver for Python
+- **Argon2-cffi** - Secure password hashing library
 
 These dependencies will be installed when you run `pip install -r src/requirements.txt`
+
+The project also requires **MongoDB** to be running. When using GitHub Codespaces, MongoDB is automatically installed and started via the devcontainer configuration.
 
 ## Debugging
 
@@ -65,4 +69,4 @@ These dependencies will be installed when you run `pip install -r src/requiremen
 | POST   | `/activities/{activity_name}/signup?email=student@mergington.edu` | Sign up for an activity                                             |
 
 > [!IMPORTANT]
-> All data is stored in memory, which means data will be reset when the server restarts.
+> The application uses MongoDB for data storage. The database is automatically initialized with sample data when first started.
